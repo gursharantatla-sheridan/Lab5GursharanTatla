@@ -13,7 +13,7 @@ namespace Lab5GursharanTatla
             builder.Services.AddControllersWithViews();
 
             // read the connection string from the appsettings.json
-            var connString = builder.Configuration.GetConnectionString("DefaultConnection");
+            var connString = builder.Configuration.GetConnectionString("AZURE_POSTGRESQL_CONNECTIONSTRING");
 
             // register the context class with the app
             builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connString));
